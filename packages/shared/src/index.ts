@@ -81,5 +81,7 @@ export function formatPaise(paise: bigint): string {
 }
 
 export function generateIdempotencyKey(): string {
-  return crypto.randomUUID();
+  return globalThis.crypto.randomUUID();
 }
+
+export * from './resilience.js';
